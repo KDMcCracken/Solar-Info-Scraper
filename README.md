@@ -3,7 +3,8 @@ Outputs a variety of information regarding solar roof installation such as, cost
 
 * Need to download file for the state that the address you are looking at is in from this link. These files are large, so I opted out of sending them with in the project folder.
 
-      <https://github.com/Microsoft/USBuildingFootprints>
+      https://github.com/Microsoft/USBuildingFootprints
+      [Named Link](http://www.google.fr/ "Named link title") and http://www.google.fr/ or <http://example.com/>
       
 * When entering the address on the initial screen, ensure it is formatted without spaces after commas. This was a design decision to reduce necessary tampering with strings.
 
