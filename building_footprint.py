@@ -1,12 +1,15 @@
 import json
 import requests
 import urllib
+import configparser
 
 from math import cos, asin, sqrt
 
+config = configparser.ConfigParser()
+config.read('config.ini')
 
 def get_site_lat_lng(address):
-    params = urllib.parse.urlencode({'address': address, 'key': 'AIzaSyBdj5tstnNDvnTZTK7UzfRDSKfX7sErGd8'})
+    params = urllib.parse.urlencode({'address': address, 'key': config['KEYS']['MyKey']})
     response = requests.get('https://maps.googleapis.com/maps/api/geocode/json?%s' % params)
     address_lat_lng = response.json()['results'][0]['geometry']['location']
 
