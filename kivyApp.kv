@@ -1,0 +1,68 @@
+<BootInterfaceScreen>:
+    name: 'menu'
+    GridLayout:
+        rows: 3
+        cols: 2
+
+        Label:
+            text: "Physical Address"
+        TextInput:
+            id: physical_address
+            text: "1112 King Street,La Crosse,WI 54601"
+            size: 75, 50
+            hint_text: "Format as \'Street address,City,State Zip code\'"
+            on_text: root.save("physical_address", self.text)
+
+        Label:
+            text: "State"
+        TextInput:
+            id: mystate
+            text: "Wisconsin"
+            size: 75, 50
+            hint_text: "The state in which the address is located."
+            on_text: root.save("state", self.text)
+
+
+        Button:
+            text: 'Connect'
+            size: 75, 50
+            on_release: app.scrape_and_display()
+
+
+<DisplayInfoScreen>
+    GridLayout:
+        rows: 6
+        cols: 2
+
+        Label:
+            text: "Building area"
+        Label:
+            text: root.building_area
+
+        Label:
+            text: "Usable sunlight per Year"
+        Label:
+            text: root.sunlight_per_year
+
+        Label:
+            text: "Area for solar panels"
+        Label:
+            text: root.area_for_panels
+
+        Label:
+            text: "Savings with solar over 20 years"
+        Label:
+            text: root.savings_with_solar
+
+        Label:
+            text: "Cost of solar roof"
+        Label:
+            text: root.cost_of_solar
+
+        Label:
+            text: "Home value before => after solar"
+        Label:
+            text: root.home_value + " => " + root.home_value_with_solar
+
+
+
